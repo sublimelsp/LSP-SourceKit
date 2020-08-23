@@ -1,0 +1,32 @@
+{
+	"command": ["xcrun", "sourcekit-lsp"],
+	"languages": [
+		{
+			// SourceKit is good with these kind of files
+			"languageId": "swift"
+		},
+		{
+			"languageId": "c",
+			// prefer clangd or ccls
+			"feature_selector": "",
+		},
+		{
+			"languageId": "cpp",
+			"document_selector": "source.c++",
+			// prefer clangd or ccls
+			"feature_selector": "",
+		},
+		{
+			"languageId": "objective-c",
+			"document_selector": "source.objc",
+			// prefer clangd or ccls
+			"feature_selector": "",
+		},
+		{
+			"languageId": "objective-cpp",
+			"document_selector": "source.objc++",
+			// prefer clangd or ccls
+			"feature_selector": "",
+		}
+	]
+}

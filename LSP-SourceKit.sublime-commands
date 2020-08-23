@@ -1,0 +1,10 @@
+[
+    {
+        "caption": "Preferences: LSP-SourceKit Settings",
+        "command": "edit_settings",
+        "args": {
+            "base_file": "${packages}/LSP-SourceKit/LSP-SourceKit.sublime-settings",
+            "default": "// Settings in here override those in \"LSP-SourceKit/LSP-SourceKit.sublime-settings\"\n{\n\t$0\n}\n"
+        }
+    }
+]
