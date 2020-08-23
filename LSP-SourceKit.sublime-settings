@@ -1,5 +1,8 @@
 {
-	"command": ["xcrun", "sourcekit-lsp"],
+	"command": [
+		"xcrun",
+		"sourcekit-lsp"
+	],
 	"languages": [
 		{
 			// SourceKit is good with these kind of files

@@ -1,7 +1,14 @@
-from LSP.plugin import AbstractPlugin, WorkspaceFolder, ClientConfig
-from LSP.plugin.core.typing import List, Optional
+from LSP.plugin import AbstractPlugin
+from LSP.plugin import ClientConfig
+from LSP.plugin import register_plugin
+from LSP.plugin import unregister_plugin
+from LSP.plugin import WorkspaceFolder
 import shutil
 import sublime
+
+# TODO: Once on Python 3.8, use the built-in typing module
+from LSP.plugin.core.typing import List
+from LSP.plugin.core.typing import Optional
 
 
 class SourceKit(AbstractPlugin):
@@ -20,3 +27,11 @@ class SourceKit(AbstractPlugin):
         if not shutil.which("xcrun"):
             return "Cannot start SourceKit without Xcode command-line tools"
         return None
+
+
+def plugin_loaded() -> None:
+    register_plugin(SourceKit)
+
+
+def plugin_unloaded() -> None:
+    unregister_plugin(SourceKit)
