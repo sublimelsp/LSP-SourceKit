@@ -25,7 +25,7 @@ class SourceKit(AbstractPlugin):
         configuration: ClientConfig
     ) -> Optional[str]:
         if not shutil.which("xcrun"):
-            return "Cannot start SourceKit without Xcode command-line tools"
+            return "missing Xcode command-line tools"
         return None
 
 
