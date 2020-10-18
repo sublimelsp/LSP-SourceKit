@@ -13,11 +13,7 @@ To use this package, you must have:
 
 This language server operates on views with base scopes:
 
-- `source.swift` (Swift files),
-- `source.c` (C files),
-- `source.c++` (C++ files),
-- `source.objc` (Objective-C files),
-- `source.objc++` (Objective-C++ files)
+- `source.swift` (Swift files)
 
 ## Usage
 
