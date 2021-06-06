@@ -24,7 +24,7 @@ class SourceKit(AbstractPlugin):
         workspace_folders: List[WorkspaceFolder],
         configuration: ClientConfig
     ) -> Optional[str]:
-        if not shutil.which("xcrun"):
+        if sublime.platform() == "osx" and not shutil.which("xcrun"):
             return "missing Xcode command-line tools"
         return None
 
