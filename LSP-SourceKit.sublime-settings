@@ -1,4 +1,5 @@
 {
+	// override this command on Linux and point it to the sourcekit-lsp executable.
 	"command": [
 		"xcrun",
 		"sourcekit-lsp"
