@@ -6,7 +6,7 @@ To use this package, you must have:
 
 - The [LSP](https://packagecontrol.io/packages/LSP) package.
 - For macOS: Xcode and/or its command-line tools; for Linux: Install [sourcekit-lsp](https://github.com/apple/sourcekit-lsp) manually.
-- A Swift syntax if you want to use this server on Swift files. You may want to try Colin's [Decent Swift Syntax](https://packagecontrol.io/packages/Decent%20Swift%20Syntax).
+- A [Swift-Next](https://github.com/Swift-Next/Swift-Next) syntax.
 
 ## Applicable Selectors
 
