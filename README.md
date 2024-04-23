@@ -34,7 +34,7 @@ Nothing is to install. The plugin will use the language server bundled with Xcod
 
 ### Linux
 
-You have to install a [swift toolchain](https://www.swift.org/install/) for your system and make it available in systems `$PATH`.
+You have to install a [swift toolchain](https://www.swift.org/install/) for your system and make it available in system's `$PATH`.
 
 ## Configuration
 
