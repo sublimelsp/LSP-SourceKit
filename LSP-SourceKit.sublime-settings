@@ -1,9 +1,8 @@
 {
-	// override this command on Linux and point it to the sourcekit-lsp executable.
 	"command": [
 		"sourcekit-lsp"
 	],
-	// Enable this server globally for all the scopes provided in "selector" property.
+	// Toggles this server globally for all the scopes provided in "selector" property.
 	"enabled": false,
 	"selector": "source.c | source.c++ | source.objc | source.objc++ | source.swift"
 }

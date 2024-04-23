@@ -5,7 +5,7 @@ This is a helper package that automatically configures [Apple's SourceKit](https
 To use this package, you must have:
 
 - The [LSP](https://packagecontrol.io/packages/LSP) package.
-- swift toolchain [in case of macOS the one comes with Xcode].
+- Swift toolchain (in case of macOS the one that comes with Xcode).
 - A [Swift-Next](https://github.com/Swift-Next/Swift-Next) syntax.
 
 ## Applicable Selectors
