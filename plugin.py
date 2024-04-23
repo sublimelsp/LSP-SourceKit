@@ -3,7 +3,6 @@ from LSP.plugin import ClientConfig
 from LSP.plugin import register_plugin
 from LSP.plugin import unregister_plugin
 from LSP.plugin import WorkspaceFolder
-import shutil
 import sublime
 
 # TODO: Once on Python 3.8, use the built-in typing module
@@ -24,8 +23,6 @@ class SourceKit(AbstractPlugin):
         workspace_folders: List[WorkspaceFolder],
         configuration: ClientConfig
     ) -> Optional[str]:
-        if sublime.platform() == "osx" and not shutil.which("xcrun"):
-            return "missing Xcode command-line tools"
         return None
 
 

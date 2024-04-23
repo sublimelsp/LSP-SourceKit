@@ -1,12 +1,7 @@
 {
 	// override this command on Linux and point it to the sourcekit-lsp executable.
 	"command": [
-		"xcrun",
-		"sourcekit-lsp"
+		"/usr/bin/sourcekit-lsp"
 	],
-	"languages": [
-		{
-			"languageId": "swift"
-		}
-	]
+	"selector": "source.c | source.c++ | source.objc | source.objc++ | source.swift"
 }
