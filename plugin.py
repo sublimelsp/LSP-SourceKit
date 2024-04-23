@@ -2,11 +2,6 @@ from LSP.plugin import AbstractPlugin
 from LSP.plugin import register_plugin
 from LSP.plugin import unregister_plugin
 
-# TODO: Once on Python 3.8, use the built-in typing module
-from LSP.plugin.core.typing import List
-from LSP.plugin.core.typing import Optional
-
-
 class SourceKit(AbstractPlugin):
     @classmethod
     def name(cls) -> str:
