@@ -15,17 +15,6 @@ class SourceKit(AbstractPlugin):
     def name(cls) -> str:
         return cls.__name__
 
-    @classmethod
-    def can_start(
-        cls,
-        window: sublime.Window,
-        initiating_view: sublime.View,
-        workspace_folders: List[WorkspaceFolder],
-        configuration: ClientConfig
-    ) -> Optional[str]:
-        return None
-
-
 def plugin_loaded() -> None:
     register_plugin(SourceKit)
 
