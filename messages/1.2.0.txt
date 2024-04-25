@@ -1,0 +1,3 @@
+# BREAKING CHANGE
+
+The server is DISABLED globaly by default, you should either override its global setting to `"enabled": true,` or run in command palette `LSP: Enable language server in project` to enable it on per-project basis.
