@@ -1,8 +1,9 @@
 {
+	// Toggles this server globally for all the scopes provided in "selector" property.
+	// Run "LSP: Enable Language Server in Project" from the Command Palette to enable per-project.
+	"enabled": false,
+	"selector": "source.c | source.c++ | source.objc | source.objc++ | source.swift",
 	"command": [
 		"sourcekit-lsp"
 	],
-	// Toggles this server globally for all the scopes provided in "selector" property.
-	"enabled": false,
-	"selector": "source.c | source.c++ | source.objc | source.objc++ | source.swift"
 }
