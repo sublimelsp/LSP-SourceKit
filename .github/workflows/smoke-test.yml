@@ -1,0 +1,15 @@
+name: Smoke test
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    uses: sublimelsp/lsp_smoke_test/.github/workflows/smoke-test.yml@v1
+    with:
+      # sourcekit-lsp comes with Xcode on macOS and with the Swift toolchain preinstalled on Ubuntu runners.
+      os: '["ubuntu-latest", "macos-latest"]'
