@@ -1,0 +1,32 @@
+Breaking changes:
+
+- The key used to override LSP-SourceKit settings in project settings has changed from `SourceKit` to `LSP-SourceKit`.
+  If you use project-specific overrides for LSP-SourceKit, you have to rename the key for them to apply:
+
+  Before:
+
+  ```jsonc
+  {
+      "settings": {
+          "LSP": {
+              "SourceKit": {
+                  // ...
+              }
+          }
+      }
+  }
+  ```
+
+  After:
+
+  ```jsonc
+  {
+      "settings": {
+          "LSP": {
+              "LSP-SourceKit": {
+                  // ...
+              }
+          }
+      }
+  }
+  ```
