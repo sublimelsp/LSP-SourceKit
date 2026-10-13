@@ -9,7 +9,26 @@ on:
 
 jobs:
   smoke:
-    uses: sublimelsp/lsp_smoke_test/.github/workflows/smoke-test.yml@v1
-    with:
-      # sourcekit-lsp comes with Xcode on macOS and with the Swift toolchain preinstalled on Ubuntu runners.
-      os: '["ubuntu-latest", "macos-latest"]'
+    name: Smoke test (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v7
+
+      # sourcekit-lsp comes with Xcode on macOS. Ubuntu runners have the Swift toolchain preinstalled, but only swift
+      # and swiftc are on the PATH; the rest of the toolchain is in SWIFT_PATH.
+      - name: Add the Swift toolchain to the PATH
+        if: runner.os == 'Linux'
+        run: echo "${SWIFT_PATH:-/usr/share/swift/usr/bin}" >> "$GITHUB_PATH"
+
+      # Windows runners don't come with Swift.
+      - uses: compnerd/gha-setup-swift@v0.5.0
+        if: runner.os == 'Windows'
+        with:
+          swift-version: swift-6.4.1-release
+          swift-build: 6.4.1-RELEASE
+
+      - uses: sublimelsp/lsp_smoke_test@v1
