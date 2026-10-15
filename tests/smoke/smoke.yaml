@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/sublimelsp/lsp_smoke_test/v1/smoke.schema.json
+file: main.c
+# The session name until the package is migrated to LspPlugin.
+server: SourceKit
+expected_diagnostics:
+  message: undeclared identifier
+# The server is disabled by default.
+settings:
+  LSP-SourceKit.sublime-settings:
+    enabled: true
