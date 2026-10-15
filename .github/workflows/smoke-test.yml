@@ -31,4 +31,7 @@ jobs:
           swift-version: swift-6.4.1-release
           swift-build: 6.4.1-RELEASE
 
+      # Sublime Text doesn't come with a Swift syntax.
       - uses: sublimelsp/lsp_smoke_test@v1
+        with:
+          extra-packages: Swift-Next/Swift-Next

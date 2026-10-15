@@ -1,19 +1,15 @@
 from __future__ import annotations
 
-from LSP.plugin import AbstractPlugin
-from LSP.plugin import register_plugin
-from LSP.plugin import unregister_plugin
+from LSP.plugin import LspPlugin
 
 
-class SourceKit(AbstractPlugin):
-    @classmethod
-    def name(cls) -> str:
-        return cls.__name__
+class SourceKit(LspPlugin):
+    pass
 
 
 def plugin_loaded() -> None:
-    register_plugin(SourceKit)
+    SourceKit.register()
 
 
 def plugin_unloaded() -> None:
-    unregister_plugin(SourceKit)
+    SourceKit.unregister()
