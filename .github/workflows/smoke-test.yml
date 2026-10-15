@@ -25,7 +25,7 @@ jobs:
         run: echo "${SWIFT_PATH:-/usr/share/swift/usr/bin}" >> "$GITHUB_PATH"
 
       # Windows runners don't come with Swift.
-      - uses: compnerd/gha-setup-swift@v0.5.0
+      - uses: compnerd/gha-setup-swift@v0.5.1
         if: runner.os == 'Windows'
         with:
           swift-version: swift-6.4.1-release
