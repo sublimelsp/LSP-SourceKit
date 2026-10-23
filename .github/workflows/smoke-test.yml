@@ -31,10 +31,10 @@ jobs:
           swift-version: swift-6.4.1-release
           swift-build: 6.4.1-RELEASE
 
-      # Sublime Text doesn't come with a Swift syntax.
+      # Sublime Text doesn't come with a Swift syntax, so install one from Package Control.
       - uses: sublimelsp/lsp_smoke_test@v1
         with:
-          extra-packages: Swift Next:Swift-Next/Swift-Next
+          extra-packages: Swift Next
 
   # A single check whose name doesn't depend on the os matrix, for rulesets to require. It runs even when the workflow
   # is cancelled: a skipped job counts as passing for a required check.
