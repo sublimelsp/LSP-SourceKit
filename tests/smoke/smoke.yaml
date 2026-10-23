@@ -3,9 +3,6 @@
 file: Sources/Smoke/main.swift
 expected_diagnostics:
   message: Cannot find 'undeclaredName' in scope
-# On Windows, sourcekit-lsp didn't always report the diagnostic within the default 180 seconds. 240 is the most the
-# smoke test allows.
-diagnostics_timeout: 240
 # The server is disabled by default.
 settings:
   LSP-SourceKit.sublime-settings:
