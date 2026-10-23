@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/sublimelsp/lsp_smoke_test/v1/smoke.schema.json
+# A single file without a Swift package, used on Windows, where sourcekit-lsp sometimes never finishes preparing the
+# package in tests/smoke and so never reports its diagnostics.
+file: main.swift
+expected_diagnostics:
+  message: Cannot find 'undeclaredName' in scope
+# The server is disabled by default.
+settings:
+  LSP-SourceKit.sublime-settings:
+    enabled: true

@@ -1,9 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/sublimelsp/lsp_smoke_test/v1/smoke.schema.json
-file: main.c
-# The session name until the package is migrated to LspPlugin.
-session_name: SourceKit
+# A Swift package, so that loading it with SwiftPM is tested too.
+file: Sources/Smoke/main.swift
 expected_diagnostics:
-  message: undeclared identifier
+  message: Cannot find 'undeclaredName' in scope
 # The server is disabled by default.
 settings:
   LSP-SourceKit.sublime-settings:
