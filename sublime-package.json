@@ -1,0 +1,45 @@
+{
+  "contributions": {
+    "settings": [
+      {
+        "file_patterns": [
+          "/LSP-SourceKit.sublime-settings"
+        ],
+        "schema": {
+          "$id": "sublime://settings/LSP-SourceKit",
+          "allOf": [
+            {
+              "$ref": "sublime://settings/LSP-plugin-base"
+            },
+            {
+              "$ref": "sublime://settings/LSP-SourceKit#/definitions/PluginConfig"
+            }
+          ],
+          "definitions": {
+            "PluginConfig": {}
+          }
+        }
+      },
+      {
+        "file_patterns": [
+          "/*.sublime-project"
+        ],
+        "schema": {
+          "properties": {
+            "settings": {
+              "properties": {
+                "LSP": {
+                  "properties": {
+                    "LSP-SourceKit": {
+                      "$ref": "sublime://settings/LSP-SourceKit#/definitions/PluginConfig"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}
