@@ -6,7 +6,7 @@ To use this package, you must have:
 
 - The [LSP](https://packagecontrol.io/packages/LSP) package.
 - [Swift toolchain](https://www.swift.org/install/). In case of macOS it comes with Xcode. In case of linux install correct variant for your distribution and make it available in system's `$PATH`.
-- A [Swift-Next](https://packagecontrol.io/packages/Swift%20Next) syntax.
+- The [Swift](https://packagecontrol.io/packages/Swift) or [Swift-Next](https://packagecontrol.io/packages/Swift%20Next) syntax package.
 
 ## Applicable Selectors
 
