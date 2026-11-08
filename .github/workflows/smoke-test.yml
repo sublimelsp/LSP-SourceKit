@@ -34,7 +34,7 @@ jobs:
       # Sublime Text doesn't come with a Swift syntax, so install one from Package Control.
       - uses: sublimelsp/lsp_smoke_test@v1
         with:
-          extra-packages: Swift Next
+          extra-packages: Swift
           # On Windows, sourcekit-lsp sometimes never finishes preparing the Swift package in tests/smoke, so test a
           # single file there.
           fixture-dir: ${{ runner.os == 'Windows' && 'tests/smoke-file' || 'tests/smoke' }}
